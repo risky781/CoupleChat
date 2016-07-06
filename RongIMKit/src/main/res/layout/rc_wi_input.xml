@@ -4,6 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.05dip"
+        android:background="@android:color/darker_gray" />
+
     <RelativeLayout
         android:id="@android:id/input"
         android:layout_width="match_parent"
@@ -44,7 +49,6 @@
                     android:layout_marginRight="10dp"
                     android:background="@android:color/darker_gray" />
             </LinearLayout>
-
 
             <ImageView
                 android:id="@android:id/icon1"

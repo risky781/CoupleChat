@@ -46,25 +46,29 @@
         <activity
             android:name=".widget.provider.TakingPicturesActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".activity.PicturePagerActivity"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+
 
 
         <!--必选： SDK 核心功能-->
         <service
             android:name="io.rong.push.core.PushRegistrationService"
-            android:exported="false"></service>
+            android:exported="false">
+        </service>
         <service
             android:name="io.rong.push.PushService"
             android:exported="false"
-            android:process="io.rong.push"></service>
+            android:process="io.rong.push">
+        </service>
 
         <service
             android:name="io.rong.push.core.MessageHandleService"
-            android:exported="true"></service>
+            android:exported="true">
+        </service>
 
         <receiver
             android:name="io.rong.push.PushReceiver"
@@ -84,7 +88,7 @@
                 <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
             </intent-filter>
         </receiver>
-
+        
         <!--必选： SDK 核心功能-->
 
         <!-- end -->

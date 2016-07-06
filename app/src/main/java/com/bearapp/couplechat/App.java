@@ -11,13 +11,21 @@ import io.rong.imlib.RongIMClient;
  */
 public class App extends Application {
 
+    private static App instance;
+
     @Override
     public void onCreate() {
         super.onCreate();
+        instance = this;
         /*
         初始化融云
          */
         RongIM.init(this);
+        RongIM.setOnReceiveMessageListener(new MyReceiveMessageListener());
+    }
+
+    public static App getInstance(){
+        return instance;
     }
 
 }
